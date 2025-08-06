@@ -1,0 +1,95 @@
+# Ignore all files starting with .
+.*
+!.gitignore
+!wp-content/plugins/jetpack/.svnignore
+
+# Ignore macOS system files
+.DS_Store
+*.DS_Store
+
+# Ignore config files
+/.ftpconfig
+/.ftpignore
+/.sftp-config.json
+
+# Ignore log files and databases
+*.log
+error.log
+*.sql
+*.sqlite
+
+# Ignore everything in wp-content, except specific folders
+wp-content/*
+!wp-content/mu-plugins/
+!wp-content/plugins/
+!wp-content/themes/
+
+# Ignore sensitive root files
+wp-config-sample.php
+/license.txt
+/readme.html
+/.htaccess
+
+# Ignore specific plugins
+wp-content/plugins/hello.php
+wp-content/plugins/index.php
+
+# Ignore specific themes
+wp-content/themes/twenty*/
+
+# Ignore backup/temp files
+~*
+
+# Ignore packaged/compressed files
+*.7z
+*.dmg
+*.gz
+*.iso
+*.jar
+*.rar
+*.tar
+*.zip
+/sitemap.xml
+/sitemap.xml.gz
+
+# Ignore node and PHP dependencies
+node_modules/
+vendor/
+*sftp*
+
+# Python bytecode
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Python build artifacts
+.Python
+build/
+develop-eggs/
+dist/
+downloads/
+eggs/
+.eggs/
+lib/
+lib64/
+parts/
+sdist/
+var/
+wheels/
+pip-wheel-metadata/
+share/python-wheels/
+*.egg-info/
+.installed.cfg
+*.egg
+
+# Virtual environments
+venv/
+env/
+.venv/
+
+# Environment variable files
+.env
+
+# Test files
+test/
+

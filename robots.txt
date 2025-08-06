@@ -1,0 +1,3 @@
+User-agent: *
+Disallow: /landing/
+Sitemap: https://www.rmc.md/sitemap.xml
