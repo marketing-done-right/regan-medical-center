@@ -335,7 +335,7 @@ document.body.innerHTML += `
 
     <!-- Book Appointment Form -->
     <div class="content-section" id="appointmentContent">
-      <form id="appointmentForm" method="POST" class="popup-form" action="form-handler.php">
+      <form id="appointmentForm" method="POST" class="popup-form" action="form-handler3.php">
         <label style="padding:0;border:none;position:relative;">First Name<i class="fa fa-asterisk" style="color:red;font-size:7px;padding-left:3px;position:absolute;top:3px; margin-left:3px;"></i></label>
         <input type="text" name="first_name" placeholder="First Name" required />
         <label style="padding:0;border:none;position:relative;">Last Name <i class="fa fa-asterisk" style="color:red;font-size:7px;padding-left:3px;position:absolute;top:3px; margin-left:3px;"></i></label>
@@ -552,7 +552,7 @@ let currentSection = "options";
         const formData = new FormData(appointmentForm);
     
         // Send AJAX request with Fetch
-        fetch("form-handler.php", {
+        fetch("form-handler3.php", {
           method: "POST",
           body: formData,
         })
