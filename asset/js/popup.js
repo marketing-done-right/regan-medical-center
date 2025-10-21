@@ -552,7 +552,7 @@ let currentSection = "options";
         const formData = new FormData(appointmentForm);
     
         // Send AJAX request with Fetch
-        fetch("assets/js/form-handler.php", {
+        fetch("asset/js/form-handler.php", {
           method: "POST",
           body: formData,
         })
