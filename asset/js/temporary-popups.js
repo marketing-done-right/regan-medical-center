@@ -6,12 +6,19 @@ document.addEventListener("DOMContentLoaded", function() {
                 background:rgba(0,0,0,0.6); display:flex; align-items:center; justify-content:center;
                 z-index:9999;">
       <div id="popupBox"
-           style="background:#fff; padding:25px  35px; border-radius:12px; text-align:center; max-width:500px; box-shadow:0 4px 15px rgba(0,0,0,0.2);">
-        <h2 style="margin-bottom:10px; color:#c0392b;"><strong>Closed Due to Water Leak</strong></h2>
-        <p style="margin:6px 0;">We are diligently working to reopen <strong>tentatively by Tuesday, Nov 4th</strong>, or sooner.</p>
-        <p style="margin:10px 0;">Please visit our <strong>Grayson Hwy office</strong>, open all weekend.</p>
+           style="background:#fff; padding:35px 40px; border-radius:12px; text-align:center; max-width:520px; box-shadow:0 4px 15px rgba(0,0,0,0.2);">
+        <h2 style="margin-bottom:10px; color:#c0392b;">
+          <strong>Temporary Closure – Five Forks Office</strong>
+        </h2>
+        <p style="margin:6px 0;"><strong>Closed Due to a Water Leak</strong></p>
+        <p style="margin:8px 0;">
+          We are diligently working to reopen <strong>tentatively by Tuesday, Nov 4th</strong>, or sooner.
+        </p>
+        <p style="margin:8px 0;">
+          Please visit our <strong>Grayson Hwy office</strong>, open all weekend.
+        </p>
         <button id="closePopup"
-                style="margin-top:15px; padding:8px 18px; border:none; background:#333; color:#fff;
+                style="margin-top:18px; padding:8px 20px; border:none; background:#333; color:#fff;
                        border-radius:6px; cursor:pointer;">Close</button>
       </div>
     </div>
@@ -23,10 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
   const popupBox = popup.querySelector('#popupBox');
   const closeButton = popup.querySelector('#closePopup');
 
-  // Close when the button is clicked
   closeButton.addEventListener('click', () => popup.remove());
-
-  // Close popup when clicking outside the box
   popupOverlay.addEventListener('click', (e) => {
     if (!popupBox.contains(e.target)) {
       popup.remove();
