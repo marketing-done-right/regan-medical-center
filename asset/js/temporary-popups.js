@@ -8,14 +8,11 @@ document.addEventListener("DOMContentLoaded", function() {
       <div id="popupBox"
            style="background:#fff; padding:35px 40px; border-radius:12px; text-align:center; max-width:520px; box-shadow:0 4px 15px rgba(0,0,0,0.2);">
         <h2 style="margin-bottom:10px; color:#c0392b;">
-          <strong>Temporary Closure – Five Forks Office</strong>
+          <strong>Five Forks Location is Open Now!</strong>
         </h2>
-        <p style="margin:6px 0;"><strong>Closed Due to a Water Leak</strong></p>
+        <p style="margin:6px 0;"><strong>We had a <strong>water leak</strong>, but everything is fixed.</strong></p>
         <p style="margin:8px 0;">
-          We are diligently working to reopen <strong>tentatively by Tuesday, Nov 4th</strong>, or sooner.
-        </p>
-        <p style="margin:8px 0;">
-          Please visit our <strong>Grayson Hwy office</strong>, open all weekend.
+          Thank you for your patience!
         </p>
         <button id="closePopup"
                 style="margin-top:18px; padding:8px 20px; border:none; background:#333; color:#fff;
