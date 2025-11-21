@@ -4,3 +4,5 @@
     script.type = "text/javascript";
     document.head.appendChild(script);
 })();
+
+// Old Script just incase for replace <script type="text/javascript" src="//cdn.callrail.com/companies/675645886/3d57c06b3b107b0c02b6/12/swap.js"></script>
