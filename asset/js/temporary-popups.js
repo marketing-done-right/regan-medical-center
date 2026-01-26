@@ -7,10 +7,12 @@ document.addEventListener("DOMContentLoaded", function() {
                 z-index:9999;">
       <div id="popupBox"
            style="background:#fff; padding:35px 40px; border-radius:12px; text-align:center; max-width:520px; box-shadow:0 4px 15px rgba(0,0,0,0.2);">
-
-        <p style="margin:6px 0;"> Due to inclement weather, our offices may experience closures.</p>
-        <p style="margin:8px 0;">
-          Please call ahead before visiting or scheduling an appointment.
+        <h2 style="margin-bottom:10px; color:#c0392b; font-size: 32px">
+          <strong>Important Notice!</strong>
+        </h2>
+        <p style="margin:6px 0; font-size:15px">Due to inclement weather, our offices may experience closures.</p>
+        <p style="margin:8px 0; font-size:15px;">
+        Please call ahead before visiting or scheduling an appointment.
         </p>
         <button id="closePopup"
                 style="margin-top:18px; padding:8px 20px; border:none; background:#333; color:#fff;
@@ -32,6 +34,3 @@ document.addEventListener("DOMContentLoaded", function() {
     }
   });
 });
-//         <h2 style="margin-bottom:10px; color:#c0392b;">
-        //   <strong>Five Forks Location is Open Now!</strong>
-        // </h2>
