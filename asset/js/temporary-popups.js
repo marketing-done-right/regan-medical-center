@@ -7,9 +7,11 @@ document.addEventListener("DOMContentLoaded", function() {
                 z-index:9999;">
       <div id="popupBox"
            style="background:#fff; padding:35px 40px; border-radius:12px; text-align:center; max-width:520px; box-shadow:0 4px 15px rgba(0,0,0,0.2);">
-        <h2 style="margin-bottom:10px; color:#c0392b; font-size: 32px">
-          <strong>Important Notice!</strong>
-        </h2>
+        <div style="background:#c0392b; margin:-35px -40px 20px -40px; padding:20px; border-radius:12px 12px 0 0;">
+          <h2 style="margin:0; color:#fff; font-size:32px;">
+            <strong>Important Notice!</strong>
+          </h2>
+        </div>
         <p style="margin:6px 0; font-size:15px">Due to inclement weather, our offices may experience closures.</p>
         <p style="margin:8px 0; font-size:15px;">
         Please call ahead before visiting or scheduling an appointment.
