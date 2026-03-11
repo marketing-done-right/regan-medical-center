@@ -291,7 +291,7 @@ document.body.innerHTML += `
       </div>
       <div class="d-none" id="callUs"></div>
       <div class="d-none" id="textUs"></div>
-      <a href="tel:678-<span>344-<span>8700" class="popup-a">
+      <a href="tel:678-344-8700" class="popup-a">
       <div class="popup-option" id="callUs1">
         <span><i class="fas fa-phone"></i>Call Us: 678-<span>344-<span>8700</span>
         <i class="fas fa-chevron-right right d-none"></i>
@@ -320,7 +320,7 @@ document.body.innerHTML += `
         <div class="location-item">
           <h5>Five Forks, Lawrenceville</h5>
           <p class="address">2878 Five Forks Trickum Road, Suite 2A</p>
-          <a href="tel:678-<span>344-<span>8700" class="location-call-btn"><i class="fas fa-phone"></i> 678-<span>344-<span>8700</a>
+          <a href="tel:678-344-8700" class="location-call-btn"><i class="fas fa-phone"></i> 678-<span>344-<span>8700</a>
         </div>
       </div>
     </div>
