@@ -10,6 +10,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     $email       = htmlspecialchars($_POST['email']);
     $phone       = htmlspecialchars($_POST['phone']);
     $location    = htmlspecialchars($_POST['location'] ?? '');
+    $existingPatient = htmlspecialchars($_POST['existing_patient'] ?? '');
     $reason      = htmlspecialchars($_POST['reason'] ?? '');
     $contactPref = htmlspecialchars($_POST['contact_pref'] ?? '');
    
@@ -28,6 +29,7 @@ if ($_SERVER["REQUEST_METHOD"] === "POST") {
     Location: $location
     Email: $email
     Phone: $phone
+    Existing Patient: $existingPatient
     Preferred Contact: $contactPref
 
     Reason:

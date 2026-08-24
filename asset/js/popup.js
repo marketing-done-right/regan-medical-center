@@ -293,7 +293,7 @@ document.body.innerHTML += `
       <div class="d-none" id="textUs"></div>
       <a href="tel:678-344-8700" class="popup-a">
       <div class="popup-option" id="callUs1">
-        <span><i class="fas fa-phone"></i>Call Us: 678-<span>344-<span>8700</span>
+        <span><i class="fas fa-phone"></i>Call Us: 678-344-8700</span>
         <i class="fas fa-chevron-right right d-none"></i>
       </div>
       </a>
@@ -320,7 +320,7 @@ document.body.innerHTML += `
         <div class="location-item">
           <h5>Five Forks, Lawrenceville</h5>
           <p class="address">2878 Five Forks Trickum Road, Suite 2A</p>
-          <a href="tel:678-344-8700" class="location-call-btn"><i class="fas fa-phone"></i> 678-<span>344-<span>8700</a>
+          <a href="tel:678-344-8700" class="location-call-btn"><i class="fas fa-phone"></i> 678-344-8700</a>
         </div>
       </div>
     </div>
@@ -359,6 +359,17 @@ document.body.innerHTML += `
           <option value="Five Forks Imaging Center">Five Forks Imaging Center</option>
           <option value="Hamilton Mill Imaging Center">Hamilton Mill Imaging Center</option>
         </select>
+
+        <label style="padding:0;border:none;position:relative;">
+          Are you an existing patient?
+          <i class="fa fa-asterisk" style="color:red;font-size:7px;padding-left:3px;position:absolute;top:3px; margin-left:3px;"></i>
+        </label>
+
+        <div class="radio-group">
+          <input type="radio" name="existing_patient" value="Yes" required /> Yes
+          <input type="radio" name="existing_patient" value="No" required /> No
+        </div>
+
         <label style="padding:0;border:none;">Reason for Appointment</label>
         <textarea name="reason" placeholder="Reason for Appointment" ></textarea>
         <div class="radio-group">
@@ -408,200 +419,200 @@ const appointmentForm = document.getElementById("appointmentForm");
 let currentSection = "options";
 
 
-      // Toggle popup
-      chatBtn.addEventListener("click", () => {
-        const isActive = popup.classList.contains("active");
-        if (isActive) {
-          closePopupAnimation();
-            const chatBtn = document.getElementsByClassName("chat-button")[0];
-            const vApplication = document.getElementsByClassName("v-application")[0];
-            
-            if (chatBtn) chatBtn.style.display = "none";
-            if (vApplication) vApplication.style.display = "none";
+// Toggle popup
+chatBtn.addEventListener("click", () => {
+  const isActive = popup.classList.contains("active");
+  if (isActive) {
+    closePopupAnimation();
+    const chatBtn = document.getElementsByClassName("chat-button")[0];
+    const vApplication = document.getElementsByClassName("v-application")[0];
 
-        } else {
-          openPopupAnimation();
-        }
-      });
+    if (chatBtn) chatBtn.style.display = "none";
+    if (vApplication) vApplication.style.display = "none";
 
-      function openPopupAnimation() {
-        popup.classList.add("active");
-        chatBtn.classList.add("active");
+  } else {
+    openPopupAnimation();
+  }
+});
 
-        resetToOptions();
-      }
+function openPopupAnimation() {
+  popup.classList.add("active");
+  chatBtn.classList.add("active");
 
-      function closePopupAnimation() {
-        popup.classList.remove("active");
-        chatBtn.classList.remove("active");
-        // Reset after animation completes
-        setTimeout(() => {
-          if (!popup.classList.contains("active")) {
-            resetToOptions();
-          }
-        }, 350);
-      }
+  resetToOptions();
+}
 
-      closePopup.addEventListener("click", closePopupAnimation);
+function closePopupAnimation() {
+  popup.classList.remove("active");
+  chatBtn.classList.remove("active");
+  // Reset after animation completes
+  setTimeout(() => {
+    if (!popup.classList.contains("active")) {
+      resetToOptions();
+    }
+  }, 350);
+}
 
-      // Back button
-      backBtn.addEventListener("click", () => {
-        resetToOptions();
-      });
+closePopup.addEventListener("click", closePopupAnimation);
 
-      function resetToOptions() {
-        // Reset header
-        headerTitle.textContent = "How can we help?";
-        headerSubtitle.textContent = "Choose from the following options";
+// Back button
+backBtn.addEventListener("click", () => {
+  resetToOptions();
+});
 
-        // Hide back button
-        backBtn.classList.remove("active");
+function resetToOptions() {
+  // Reset header
+  headerTitle.textContent = "How can we help?";
+  headerSubtitle.textContent = "Choose from the following options";
 
-        // Show options and hide content sections
-        optionsSection.classList.remove("hide");
-        callContent.classList.remove("active");
-        textContent.classList.remove("active");
-        scheduleContent.classList.remove("active");
+  // Hide back button
+  backBtn.classList.remove("active");
+
+  // Show options and hide content sections
+  optionsSection.classList.remove("hide");
+  callContent.classList.remove("active");
+  textContent.classList.remove("active");
+  scheduleContent.classList.remove("active");
+  appointmentContent.classList.remove("active");
+  chatBtn.classList.remove("chat-hide");
+
+  currentSection = "options";
+}
+
+function showSection(section, title, subtitle) {
+  if (currentSection === section) return;
+
+  // Update header
+  headerTitle.textContent = title;
+  headerSubtitle.textContent = subtitle;
+
+  // Show back button
+  backBtn.classList.add("active");
+
+  // Hide options with vertical collapse
+  optionsSection.classList.add("hide");
+
+  // Show the selected section with vertical expand after options collapse
+  setTimeout(() => {
+    switch (section) {
+      case "call":
+        callContent.classList.add("active");
+        break;
+      case "text":
+        textContent.classList.add("active");
+        break;
+      case "schedule":
+        scheduleContent.classList.add("active");
+        break;
+      case "appointment":
+        appointmentContent.classList.add("active");
+        break;
+      case "success":
+        successContent.classList.add("active");
         appointmentContent.classList.remove("active");
-        chatBtn.classList.remove("chat-hide");
+        break;
+    }
+  }, 200);
 
-        currentSection = "options";
+  currentSection = section;
+}
+
+// Option click handlers
+callUs.addEventListener("click", () => {
+  showSection(
+    "call",
+    "Hello! 👋",
+    "Please contact us at the following locations."
+  );
+  chatBtn.classList.add("chat-hide");
+});
+textUs.addEventListener("click", () => {
+  showSection(
+    "text",
+    "Hello! 👋",
+    "Please contact us at the following locations."
+  );
+  chatBtn.classList.add("chat-hide");
+});
+
+// scheduleOnline.addEventListener("click", () => {
+//   window.open("https://www.rmc.md/schedule-online", "_blank");
+//   //   showSection('schedule', 'Schedule Online', 'Book your preferred time');
+// });
+
+bookAppointment.addEventListener("click", () => {
+  showSection(
+    "appointment",
+    "Request Appointment Now",
+    "Fill out the form below"
+  );
+});
+openPopupAnimation()
+bookAppointment.click();
+
+const submitBtn = appointmentForm.querySelector("button");
+
+appointmentForm.addEventListener("submit", (e) => {
+  e.preventDefault();
+
+  const originalText = submitBtn.innerHTML;
+  submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Booking...';
+  submitBtn.disabled = true;
+
+  // Collect form data
+  const formData = new FormData(appointmentForm);
+
+  // Send AJAX request with Fetch
+  fetch("asset/js/form-handler.php", {
+    method: "POST",
+    body: formData,
+  })
+    .then((response) => response.json())
+    .then((data) => {
+      if (data.status === "success") {
+        // ✅ Success — reset form and show success section
+        appointmentForm.reset();
+        showSection(
+          "success",
+          "Request Sent",
+          "Appointment request sent successfully!"
+        );
+        //   alert("🎉 Appointment request sent successfully!");
+      } else {
+        // ❌ Server error (PHP mail failed)
+        alert("⚠️ " + (data.message || "Email failed to send."));
       }
+    })
+    .catch((error) => {
+      // ⚠️ Network / fetch error
+      console.error("Error:", error);
+      alert("⚠️ Network error, please try again.");
+    })
+    .finally(() => {
+      // Restore button
+      submitBtn.innerHTML = originalText;
+      submitBtn.disabled = false;
+    });
+});
+// appointmentForm.addEventListener("submit", (e) => {
+//   e.preventDefault();
 
-      function showSection(section, title, subtitle) {
-        if (currentSection === section) return;
+//   const submitBtn = appointmentForm.querySelector("button");
+//   const originalText = submitBtn.innerHTML;
 
-        // Update header
-        headerTitle.textContent = title;
-        headerSubtitle.textContent = subtitle;
+//   submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Booking...';
+//   submitBtn.disabled = true;
 
-        // Show back button
-        backBtn.classList.add("active");
+//   setTimeout(() => {
+//     // Hide form and show success section
+//     appointmentContent.classList.remove("active");
+//     document.getElementById("successContent").classList.add("active");
 
-        // Hide options with vertical collapse
-        optionsSection.classList.add("hide");
-
-        // Show the selected section with vertical expand after options collapse
-        setTimeout(() => {
-          switch (section) {
-            case "call":
-              callContent.classList.add("active");
-              break;
-            case "text":
-              textContent.classList.add("active");
-              break;
-            case "schedule":
-              scheduleContent.classList.add("active");
-              break;
-            case "appointment":
-              appointmentContent.classList.add("active");
-              break;
-            case "success":
-              successContent.classList.add("active");
-              appointmentContent.classList.remove("active");
-              break;
-          }
-        }, 200);
-
-        currentSection = section;
-      }
-      
-      // Option click handlers
-      callUs.addEventListener("click", () => {
-        showSection(
-          "call",
-          "Hello! 👋",
-          "Please contact us at the following locations."
-        );
-        chatBtn.classList.add("chat-hide");
-      });
-      textUs.addEventListener("click", () => {
-        showSection(
-          "text",
-          "Hello! 👋",
-          "Please contact us at the following locations."
-        );
-        chatBtn.classList.add("chat-hide");
-      });
-
-      // scheduleOnline.addEventListener("click", () => {
-      //   window.open("https://www.rmc.md/schedule-online", "_blank");
-      //   //   showSection('schedule', 'Schedule Online', 'Book your preferred time');
-      // });
-
-      bookAppointment.addEventListener("click", () => {
-        showSection(
-          "appointment",
-          "Request Appointment Now",
-          "Fill out the form below"
-        );
-      });
-      openPopupAnimation()
-      bookAppointment.click();
-
-      const submitBtn = appointmentForm.querySelector("button");
-
-      appointmentForm.addEventListener("submit", (e) => {
-        e.preventDefault();
-    
-        const originalText = submitBtn.innerHTML;
-        submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Booking...';
-        submitBtn.disabled = true;
-    
-        // Collect form data
-        const formData = new FormData(appointmentForm);
-    
-        // Send AJAX request with Fetch
-        fetch("asset/js/form-handler.php", {
-          method: "POST",
-          body: formData,
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            if (data.status === "success") {
-              // ✅ Success — reset form and show success section
-              appointmentForm.reset();
-              showSection(
-                  "success",
-                  "Request Sent",
-                  "Appointment request sent successfully!"
-                );
-            //   alert("🎉 Appointment request sent successfully!");
-            } else {
-              // ❌ Server error (PHP mail failed)
-              alert("⚠️ " + (data.message || "Email failed to send."));
-            }
-          })
-          .catch((error) => {
-            // ⚠️ Network / fetch error
-            console.error("Error:", error);
-            alert("⚠️ Network error, please try again.");
-          })
-          .finally(() => {
-            // Restore button
-            submitBtn.innerHTML = originalText;
-            submitBtn.disabled = false;
-          });
-      });
-    // appointmentForm.addEventListener("submit", (e) => {
-    //   e.preventDefault();
-    
-    //   const submitBtn = appointmentForm.querySelector("button");
-    //   const originalText = submitBtn.innerHTML;
-    
-    //   submitBtn.innerHTML = '<i class="fas fa-spinner fa-spin"></i> Booking...';
-    //   submitBtn.disabled = true;
-    
-    //   setTimeout(() => {
-    //     // Hide form and show success section
-    //     appointmentContent.classList.remove("active");
-    //     document.getElementById("successContent").classList.add("active");
-    
-    //     appointmentForm.reset();
-    //     submitBtn.innerHTML = originalText;
-    //     submitBtn.disabled = false;
-    //   }, 1500);
-    // });
+//     appointmentForm.reset();
+//     submitBtn.innerHTML = originalText;
+//     submitBtn.disabled = false;
+//   }, 1500);
+// });
 
 
 //  document.onkeydown = function(e) {
@@ -657,7 +668,7 @@ let currentSection = "options";
 
 // Disable right-click menu
 document.addEventListener("contextmenu", (e) => e.preventDefault());
- 
+
 
 
 
@@ -668,10 +679,10 @@ document.getElementById("successOkBtn").addEventListener("click", () => {
 });
 
 
-      // Close popup when clicking outside
- document.addEventListener("click", (e) => {
+// Close popup when clicking outside
+document.addEventListener("click", (e) => {
   if (
-    !popup.contains(e.target) && 
+    !popup.contains(e.target) &&
     !chatBtn.contains(e.target) &&
     !document.getElementById("ui-datepicker-div").contains(e.target) &&
     !document.querySelector(".ui-corner-all").contains(e.target)
