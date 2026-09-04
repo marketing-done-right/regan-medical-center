@@ -6331,6 +6331,420 @@
 						</div>
 					</div>
 				</section>
+				<!-- START Dr. Karla Booker promotional section -->
+				<section id="rmc-booker-promo" data-section-width="boxed">
+					<style>
+						#rmc-booker-promo {
+							background: linear-gradient(180deg, rgba(var(--theme-color-3-rgbv), .10) 0%, rgba(var(--theme-color-3-rgbv), .02) 100%);
+							padding: 70px 20px;
+							font-family: Poppins, Helvetica, Arial, sans-serif;
+							box-sizing: border-box;
+							overflow-x: hidden;
+						}
+
+						#rmc-booker-promo *,
+						#rmc-booker-promo *::before,
+						#rmc-booker-promo *::after {
+							box-sizing: border-box;
+						}
+
+						#rmc-booker-promo .booker-inner {
+							max-width: 1140px;
+							margin: 0 auto;
+							display: grid;
+							grid-template-columns: minmax(260px, 360px) minmax(0, 1fr);
+							gap: 50px;
+							align-items: start;
+						}
+
+						#rmc-booker-promo .booker-portrait {
+							position: relative;
+							border-radius: 14px;
+							overflow: hidden;
+							background: linear-gradient(160deg, rgba(var(--theme-color-3-rgbv), .35) 0%, rgba(var(--theme-color-1-rgbv), .9) 100%);
+							display: flex;
+							align-items: flex-end;
+							justify-content: center;
+							box-shadow: 0 18px 40px rgba(var(--theme-color-1-rgbv), .18);
+						}
+
+						#rmc-booker-promo .booker-portrait img {
+							display: block;
+							width: 100%;
+							max-width: 100%;
+							height: auto;
+							margin-bottom: -1px;
+						}
+
+						#rmc-booker-promo .booker-content {
+							min-width: 0;
+							overflow-wrap: break-word;
+						}
+
+						#rmc-booker-promo .booker-eyebrow {
+							margin: 0 0 10px;
+							color: rgba(var(--theme-color-4-rgbv), 1);
+							font-size: 13px;
+							font-weight: 500;
+							letter-spacing: .16em;
+							line-height: 1.4em;
+							text-transform: uppercase;
+						}
+
+						#rmc-booker-promo .booker-name {
+							margin: 0 0 6px;
+							color: rgba(var(--theme-color-1-rgbv), 1);
+							font-size: 34px;
+							font-weight: 500;
+							line-height: 1.2em;
+						}
+
+						#rmc-booker-promo .booker-role {
+							margin: 0 0 22px;
+							color: rgba(var(--theme-color-3-dark-rgbv), 1);
+							font-size: 17px;
+							font-weight: 400;
+							line-height: 1.5em;
+						}
+
+						#rmc-booker-promo .booker-tags {
+							list-style: none;
+							margin: 0 0 26px;
+							padding: 0;
+							display: flex;
+							flex-wrap: wrap;
+							gap: 8px;
+						}
+
+						#rmc-booker-promo .booker-tags li {
+							background: rgba(var(--theme-color-3-rgbv), .14);
+							color: rgba(var(--theme-color-1-rgbv), 1);
+							border-radius: 999px;
+							padding: 6px 14px;
+							font-size: 13px;
+							line-height: 1.4em;
+						}
+
+						#rmc-booker-promo .booker-bio p {
+							margin: 0 0 16px;
+							color: rgba(var(--theme-color-6-light-rgbv), 1);
+							font-size: 16px;
+							font-weight: 300;
+							line-height: 1.75em;
+						}
+
+						#rmc-booker-promo .booker-more {
+							margin: 0 0 24px;
+						}
+
+						#rmc-booker-promo .booker-more > summary {
+							cursor: pointer;
+							display: inline-block;
+							color: rgba(var(--theme-color-4-rgbv), 1);
+							font-size: 15px;
+							font-weight: 500;
+							letter-spacing: .02em;
+							line-height: 1.5em;
+							padding: 6px 0;
+							list-style: none;
+						}
+
+						#rmc-booker-promo .booker-more > summary::-webkit-details-marker {
+							display: none;
+						}
+
+						#rmc-booker-promo .booker-more > summary::after {
+							content: " \25BE";
+						}
+
+						#rmc-booker-promo .booker-more[open] > summary::after {
+							content: " \25B4";
+						}
+
+						#rmc-booker-promo .booker-more > summary:hover {
+							color: rgba(var(--theme-color-4-dark-rgbv), 1);
+						}
+
+						#rmc-booker-promo .booker-more .booker-bio {
+							padding-top: 16px;
+						}
+
+						#rmc-booker-promo .booker-quote {
+							margin: 0 0 24px;
+							padding: 4px 0 4px 20px;
+							border-left: 3px solid rgba(var(--theme-color-4-rgbv), 1);
+							color: rgba(var(--theme-color-1-rgbv), 1);
+							font-size: 21px;
+							font-weight: 400;
+							line-height: 1.5em;
+						}
+
+						#rmc-booker-promo .booker-quote span {
+							display: block;
+							margin-top: 6px;
+							color: rgba(var(--theme-color-3-dark-rgbv), 1);
+							font-size: 13px;
+							letter-spacing: .04em;
+							line-height: 1.5em;
+						}
+
+						#rmc-booker-promo .booker-buttons {
+							display: flex;
+							flex-wrap: wrap;
+							gap: 12px;
+						}
+
+						#rmc-booker-promo .booker-buttons a {
+							display: inline-block;
+							padding: 14px 28px;
+							border-radius: 4px;
+							font-size: 15px;
+							font-weight: 500;
+							letter-spacing: .02em;
+							line-height: 1.4em;
+							text-align: center;
+							text-decoration: none;
+							border: 1px solid transparent;
+							transition: background-color .25s ease, color .25s ease;
+						}
+
+						#rmc-booker-promo .booker-buttons a.booker-btn-ghost {
+							border-color: rgba(var(--theme-color-1-rgbv), 1);
+							color: rgba(var(--theme-color-1-rgbv), 1);
+						}
+
+						#rmc-booker-promo .booker-buttons a.booker-btn-ghost:hover {
+							background-color: rgba(var(--theme-color-1-rgbv), 1);
+							color: rgba(var(--theme-color-5-rgbv), 1);
+						}
+
+						/* Tablet landscape */
+						@media only screen and (max-width: 1024px) {
+							#rmc-booker-promo {
+								padding: 60px 24px;
+							}
+
+							#rmc-booker-promo .booker-inner {
+								grid-template-columns: minmax(220px, 300px) minmax(0, 1fr);
+								gap: 36px;
+							}
+
+							#rmc-booker-promo .booker-name {
+								font-size: 30px;
+							}
+
+							#rmc-booker-promo .booker-role {
+								font-size: 16px;
+								margin-bottom: 18px;
+							}
+
+							#rmc-booker-promo .booker-quote {
+								font-size: 20px;
+							}
+						}
+
+						/* Tablet portrait and below - stacked */
+						@media only screen and (max-width: 880px) {
+							#rmc-booker-promo {
+								padding: 52px 24px;
+							}
+
+							#rmc-booker-promo .booker-inner {
+								grid-template-columns: minmax(0, 1fr);
+								gap: 30px;
+								justify-items: center;
+							}
+
+							#rmc-booker-promo .booker-portrait {
+								width: 100%;
+								max-width: 340px;
+							}
+
+							#rmc-booker-promo .booker-content {
+								width: 100%;
+								max-width: 640px;
+							}
+
+							#rmc-booker-promo .booker-name {
+								font-size: 28px;
+							}
+
+							#rmc-booker-promo .booker-tags {
+								margin-bottom: 22px;
+							}
+						}
+
+						/* Mobile */
+						@media only screen and (max-width: 680px) {
+							#rmc-booker-promo {
+								padding: 44px 18px;
+							}
+
+							#rmc-booker-promo .booker-inner {
+								gap: 26px;
+							}
+
+							#rmc-booker-promo .booker-portrait {
+								max-width: 300px;
+								border-radius: 12px;
+							}
+
+							#rmc-booker-promo .booker-eyebrow {
+								font-size: 12px;
+								letter-spacing: .12em;
+							}
+
+							#rmc-booker-promo .booker-name {
+								font-size: 25px;
+							}
+
+							#rmc-booker-promo .booker-role {
+								font-size: 15px;
+								margin-bottom: 16px;
+							}
+
+							#rmc-booker-promo .booker-tags li {
+								font-size: 12.5px;
+								padding: 5px 12px;
+							}
+
+							#rmc-booker-promo .booker-bio p {
+								font-size: 15px;
+								line-height: 1.7em;
+							}
+
+							#rmc-booker-promo .booker-quote {
+								font-size: 18px;
+								padding-left: 16px;
+							}
+
+							#rmc-booker-promo .booker-more > summary {
+								font-size: 14px;
+								padding: 8px 0;
+							}
+						}
+
+						/* Small phones */
+						@media only screen and (max-width: 480px) {
+							#rmc-booker-promo {
+								padding: 36px 16px;
+							}
+
+							#rmc-booker-promo .booker-portrait {
+								max-width: 260px;
+							}
+
+							#rmc-booker-promo .booker-name {
+								font-size: 22px;
+							}
+
+							#rmc-booker-promo .booker-quote {
+								font-size: 17px;
+							}
+
+							#rmc-booker-promo .booker-tags li {
+								font-size: 12px;
+							}
+
+							#rmc-booker-promo .booker-buttons {
+								display: block;
+							}
+
+							#rmc-booker-promo .booker-buttons a {
+								display: block;
+								width: 100%;
+								padding: 14px 20px;
+							}
+						}
+					</style>
+					<div class="booker-inner">
+						<div class="booker-portrait">
+							<img src="../asset/OfficeLocations/karla-booker-portrait.webp"
+								alt="Karla Lorraine Booker, MD, physician at Reagan Medical Center Suwanee"
+								loading="lazy" />
+						</div>
+						<div class="booker-content">
+							<p class="booker-eyebrow">Now Seeing Patients in Suwanee</p>
+							<h2 class="booker-name">Karla Lorraine Booker, MD</h2>
+							<p class="booker-role">Double Board Certified in Obstetrics &amp; Gynecology and Family
+								Medicine</p>
+							<ul class="booker-tags">
+								<li>Urgent Care</li>
+								<li>Sports, School &amp; Camp Physicals</li>
+								<li>Wellness &amp; Preventive Care</li>
+								<li>Chronic Disease Management</li>
+								<li>Weight Management</li>
+								<li>Women&rsquo;s Wellness &amp; Family Planning</li>
+								<li>Infertility Diagnosis &amp; Management</li>
+								<li>Menopause Care</li>
+							</ul>
+							<div class="booker-bio">
+								<p>Karla Lorraine Booker, MD, is a double board certified physician in Obstetrics and
+									Gynecology and Family Medicine, with decades of experience caring for patients
+									across a wide range of healthcare needs. She brings her expertise and passion for
+									comprehensive care to Reagan Medical Center.</p>
+								<p>Dr. Booker provides care for infants, children, teens, and adults, including urgent
+									care, sports, school and camp physicals, wellness and preventive care, chronic
+									disease management, and weight management. As a women&rsquo;s health expert, she
+									provides general women&rsquo;s wellness and family planning, including IUD and
+									Nexplanon insertion, as well as infertility diagnosis and management, abnormal Pap
+									and bleeding management, PMOS (formerly PCOS) diagnosis and management, and
+									menopause care.</p>
+							</div>
+							<details class="booker-more">
+								<summary>Read Dr. Booker&rsquo;s full biography</summary>
+								<div class="booker-bio">
+									<p>Dr. Booker is a graduate of Meharry Medical College in Nashville, Tennessee. She
+										completed her residency in Obstetrics and Gynecology at Georgia Baptist Medical
+										Center in Atlanta and her chief residency year at Saint Michael&rsquo;s Medical
+										Center in Newark, New Jersey. She practiced Ob-Gyn for 13 years and served as
+										Department Chair at Southside Medical Center, the largest community health
+										center in the Southeast.</p>
+									<p>To expand her scope of practice, Dr. Booker completed a second residency in
+										Family Medicine at Morehouse School of Medicine. She was appointed Assistant
+										Professor and Director of the Maternal Child Health Division and later went on
+										to Gwinnett Medical Center, where she helped to found the Family Medicine
+										residency program.</p>
+									<p>Dr. Booker&rsquo;s passion centers on helping the next generation navigate their
+										way to a career in medicine. She serves as an adjunct Professor at Morehouse
+										School of Medicine and at the Georgia campus of the Philadelphia College of
+										Osteopathic Medicine. She founded Hampton University&rsquo;s Pre Medical/Alumni
+										Advisory Panel, bringing together learners and alumni for mentorship and
+										networking. Her appointment to Morehouse&rsquo;s Admissions Committee in 2024 is
+										one of her proudest moments. During her tenure as faculty at Morehouse School of
+										Medicine, she was honored as an Honorary Class Member and Graduation Marshal by
+										multiple classes. On Class Day annually, she provides scholarships to Morehouse
+										graduates, acknowledging the level of excellence they have achieved.</p>
+									<p>Dr. Booker believes that community service through volunteerism is an important
+										part of being a medical professional. She has volunteered at the Truth&rsquo;s
+										Clinic in Lawrenceville, Georgia, since 2014, where she began the Women&rsquo;s
+										Health program, providing contraception and menopause care to Gwinnett
+										County&rsquo;s most needy. In 2025, she was named to the Board of the Georgia
+										Healthy Family Alliance, which provides statewide funding for physician
+										innovators serving the underserved.</p>
+									<p>In August 2026, Dr. Booker joined the Reagan Medical family, bringing her years
+										of healthcare experience, compassionate approach, and commitment to patient
+										care to the team.</p>
+									<p>Outside of medicine, her favorite titles are Grandmommy, world traveler, and
+										avid crocheter. She has three beloved grown children and two delightful
+										grandsons. She is also the #1 bestselling Amazon author of 71 Days: A
+										Caregiver&rsquo;s Guide, sharing her journey with her late husband&rsquo;s
+										terminal cancer. She is now dedicated to healing through grief and overall
+										wellness.</p>
+								</div>
+							</details>
+							<blockquote class="booker-quote">&ldquo;Come Ready to Heal.&rdquo;<span>Dr. Booker&rsquo;s
+									approach to every patient</span></blockquote>
+							<div class="booker-bio">
+								<p>Come meet Dr. Booker at Reagan Medical Center (Suwanee Location) and experience her
+									compassionate approach to care.</p>
+							</div>
+							<div class="booker-buttons"><a class="booker-btn-ghost"
+									href="/provider/karla-lorraine-booker-md">View Profile</a></div>
+						</div>
+					</div>
+				</section>
+				<!-- END Dr. Karla Booker promotional section -->
 				<section data-position="default" data-position-popup-appearance="always" data-arranger="flex"
 					data-textalign="center" data-verticalalign="center" data-horizontalalign="center"
 					data-layouttype="multi" data-layoutclass="bottom-center" data-layoutborder="10"
